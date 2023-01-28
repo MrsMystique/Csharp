@@ -5,7 +5,12 @@ Console.Clear();
 Console.Write("Введите число от 1 до 7 и узнаете день недели: ");
 int user = Convert.ToInt32(Console.ReadLine());
 // Делаем условие которое будет показывать день недели
-if(user == 1)
+while(user < 1 || user > 7)
+{
+    Console.WriteLine("Нужно написать число от 1 до 7 не как иначе");
+    user=Convert.ToInt32(Console.ReadLine());
+}
+    if(user == 1)
 {
     Console.WriteLine("Понедельник");
 }
@@ -29,7 +34,7 @@ else if(user == 6)
 {
     Console.WriteLine("Суббота");
 }
-else if(user == 7)
+else
 {
     Console.WriteLine("Воскресение");
 }
